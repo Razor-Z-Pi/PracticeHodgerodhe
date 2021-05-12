@@ -28,6 +28,7 @@ namespace PracticeHodgerodhe.Pages
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
+            numchetChet.Content = "";
             try
             {
                 /// <summary>
@@ -43,20 +44,27 @@ namespace PracticeHodgerodhe.Pages
                     list[i] = s1;
 
                 }
-                if (text.Length % 2 == 0) // Если чётная длина, то удаляются 2 первых и 2 последних символа. 
+                if ((text.Length > 2) && (text.Length > 4)) // Чтобы срабатывало условие задачи
                 {
-                    numchet.Content = "Длина чётная";
-                    for (int i = 0; i < n; i++)
+                    if (text.Length % 2 == 0) // Если чётная длина, то удаляются 2 первых и 2 последних символа. 
                     {
-                        list[0] = "";
-                        list[1] = "";
-                        list[list.Length - 1] = "";
-                        list[list.Length - 2] = "";
+                        numchet.Content = "Длина чётная";
+                        for (int i = 0; i < n; i++)
+                        {
+                            list[0] = "";
+                            list[1] = "";
+                            list[list.Length - 1] = "";
+                            list[list.Length - 2] = "";
+                        }
+                    }
+                    else
+                    {
+                        numchet.Content = "Длина нечётная";
                     }
                 }
                 else
                 {
-                    numchet.Content = "Длина нечётная";
+                    MessageBox.Show("Строка маленькая, введите больше 4 букв");
                 }
 
                 for (int i = 0; i < n; i++)
