@@ -169,10 +169,6 @@ namespace PracticeHodgerodhe.Pages
                         {
                             arrayBox.Text += i + " ";
                         }
-                        else
-                        {
-                            arrayBox.Text += "Нету" + " ";
-                        }
                     }
 
                     arrayBox.Text += "\n" + $"положительные элементы, кратные {knumber.Text} -> ";
