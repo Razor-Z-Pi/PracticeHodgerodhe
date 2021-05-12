@@ -1,0 +1,91 @@
+﻿<Page x:Class="PracticeHodgerodhe.Pages.Block_7"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticeHodgerodhe.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="Block_7">
+
+    <Grid>
+        <!--Разметка сетки-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Распределения по сетки Label, comboBox, TextBox-->
+        <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <Label Content="Наименование"></Label>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <Label Content="Место"></Label>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="2" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <Label Content="Распостранение"></Label>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <Label Content="Длина"></Label>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBox IsReadOnly="True" x:Name="Name" Width="150"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBox IsReadOnly="True" x:Name="Location" Width="150"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBox IsReadOnly="True" x:Name="addition" Width="150"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBox IsReadOnly="True" x:Name="liner" Height="20" Width="150"></TextBox>
+                <Label x:Name="dl" Content=""></Label>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                <Label Content="Место"></Label>
+                <ComboBox Margin="10 0" x:Name="cmbLocation" IsReadOnly="True" Width="180">
+                    <ComboBoxItem Content="Псковское озеро"></ComboBoxItem>
+                    <ComboBoxItem Content="Астраханская"></ComboBoxItem>
+                    <ComboBoxItem Content="Воронежской губернии"></ComboBoxItem>
+                    <ComboBoxItem Content="Вся область"></ComboBoxItem>
+                    <ComboBoxItem Content="Тропичексий лес"></ComboBoxItem>
+                </ComboBox>
+                <Button x:Name="btnSerarch" Click="BtnSerarch_Click" Width="100" Height="20" Margin="235 0 0 0" Content="Поиск"></Button>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Page>

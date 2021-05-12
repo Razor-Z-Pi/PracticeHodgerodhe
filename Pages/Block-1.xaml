@@ -1,0 +1,40 @@
+﻿<Page x:Class="PracticeHodgerodhe.Pages.Block_1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticeHodgerodhe.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="Block_1">
+
+    <Grid>
+        <!--Разметка сетки-->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <!--Картинка с формулами, Задание-->
+        <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="275" Width="650" Grid.ColumnSpan="2">
+            <Image Source="../images/Formula.PNG"></Image>
+        </StackPanel>
+        
+        <!--Панель для вывода информации-->
+        <StackPanel Grid.Row="1" Margin="0,0,0,175" Orientation="Horizontal" Grid.RowSpan="2">
+            <Label Foreground="Black" FontSize="18" Content="Введите x" />
+            <TextBox x:Name="ground" MaxLength="8" Height="30" Width="102" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+            <Label FontSize="18" Margin="0 0 0 0" Foreground="Black" Content="x = " Width="35"/>
+            <Label x:Name="Ravn" FontSize="18" Foreground="Black" Content=""/>
+            <Label FontSize="18" Foreground="Black" Content=",при"/>
+            <Label x:Name="sravn" FontSize="18" Foreground="Black" Content=""/>
+            <Label FontSize="18" Foreground="Black" Content=";Ответ = "/>
+            <Label x:Name="otvet" FontSize="18" Foreground="Black" Content=""/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Width="100" Height="50">
+            <Button x:Name="Hope" Height="50" Background="Bisque" BorderBrush="Red" Content="Решить" BorderThickness="4" Click="Hope_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

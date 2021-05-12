@@ -1,0 +1,12 @@
+﻿<Application x:Class="PracticeHodgerodhe.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PracticeHodgerodhe"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <LinearGradientBrush x:Key="backfont">
+            <GradientStop Offset="0.5" Color="#d1cc66"></GradientStop>
+            <GradientStop Offset="0.5" Color="#ab3c3c"></GradientStop>
+        </LinearGradientBrush>
+    </Application.Resources>
+</Application>

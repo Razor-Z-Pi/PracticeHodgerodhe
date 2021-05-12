@@ -1,0 +1,88 @@
+﻿<Page x:Class="PracticeHodgerodhe.Pages.Block_3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticeHodgerodhe.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="Block_3">
+
+    <Grid>
+        <!--Размтека сетки-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="210"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+         
+        <!--Описания для левой панели-->
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <TextBlock Text="Ввидет ниже в 10 полей"></TextBlock>
+            <TextBlock Text="цифры, для массива"></TextBlock>
+        </StackPanel>
+
+        <!--Задание 3.1-->
+        <DockPanel Grid.Column="1" Grid.Row="0">
+            <Label Content="3.1 Дан массив целых чисел, состоящий из 10 элементов. Заполнить его с клавиатуры."></Label>
+        </DockPanel>
+
+
+        <!--Компановка элемнтов для первого Задания, по блокам-->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBox IsReadOnly="True" x:Name="arrayBox" MaxHeight="150" Height="150" ></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Label Content="3.2 Дан массив целых чисел (n=15)"></Label>
+                <Label Content=" заполненный случайным образом числами из промежутка [-20,50]."></Label>
+                <Button x:Name="GoVin" Click="GoVin_Click" Content="Решить" Height="30"  Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 10"></Button>
+            </StackPanel>
+        </Grid>
+
+        <!--Поля в левой панели-->
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber1"></TextBox>
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber2"></TextBox>
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber3"></TextBox>
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber4"></TextBox>
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber5"></TextBox>
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber6"></TextBox>
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber7"></TextBox>
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber8"></TextBox>
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber9"></TextBox>
+        </StackPanel>
+
+        <!--Второе задание-->
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <TextBox IsReadOnly="True" x:Name="arrayN" MaxHeight="150" Height="149" ></TextBox>
+        </StackPanel>
+
+        <!--Продолжение левой панели, кнопка для сформулирования массива из введёных в поля цифры, там же поля для сравнения и поиска по заданию-->
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber10"></TextBox>
+            <TextBlock TextAlignment="Center" Text="Введите Цифры"></TextBlock>
+            <TextBlock TextAlignment="Center" Text="для массива"></TextBlock>
+            <Button x:Name="addList" Click="addList_Click" Height="30" Width="60" Content="Добавить"></Button>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="А = "></Label>
+                <TextBox MaxLength="3" x:Name="Anumber" Width="30"></TextBox>
+                <Label Content="k = "></Label>
+                <TextBox MaxLength="3" x:Name="knumber" Width="30"></TextBox>
+            </StackPanel>
+        </StackPanel>
+
+
+        
+    </Grid>
+</Page>

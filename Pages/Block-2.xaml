@@ -1,0 +1,99 @@
+﻿<Page x:Class="PracticeHodgerodhe.Pages.Block_2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticeHodgerodhe.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="Block_2">
+
+    <Grid>
+        <!--Разметка сетки-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--Расположения обьектов по разметки на блоки-->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="0">
+            <TextBlock Text="Простые типы данных 2.1"></TextBlock>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0">
+            <TextBlock Text="Введите натуральное число"></TextBlock>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0">
+            <TextBlock Text="Введите А для поиска повторения чисел"></TextBlock>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0">
+            <TextBlock Text="Введите B для сравнения"></TextBlock>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4" Grid.ColumnSpan="2">
+            <TextBlock Text="2.2"></TextBlock>
+        </StackPanel>
+
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="0">
+            <TextBlock TextAlignment="Center" Text="Найти сумму всех чисел из промежутка от А до В, " Height="19" Width="321"></TextBlock>
+            <TextBlock Text="кратных 13 и 5. (А и В вводятся с клавиатуры)" Height="23" Width="317"></TextBlock>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="6" Grid.ColumnSpan="2">
+            <Button x:Name="btnResh" Click="btnResh_Click" Width="50" Height="30" Content="Решить"></Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.ColumnSpan="2">
+            <Label Content="Натуральное число:" Width="121"></Label>
+            <Label x:Name="natural" Content="" Width="41"></Label>
+            <Label Content="Повторений:" Width="85"></Label>
+            <Label x:Name="povtor" Content="" Width="59"></Label>
+            <Label Content="Числа:" Width="48"></Label>
+            <Label x:Name="numbers" Content="" Width="44"></Label>
+
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+            <TextBox x:Name="natNum" MaxLength="3" Height="20" Width="150"></TextBox>
+        </StackPanel>
+
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1">
+            <TextBox x:Name="Povtor" MaxLength="1" Height="20" Width="150"></TextBox>
+        </StackPanel>
+
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1">
+            <TextBox x:Name="Srawnn" MaxLength="3" Height="20" Width="150"></TextBox>
+        </StackPanel>
+
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1">
+            <TextBox x:Name="A" MaxLength="5" Height="20" Width="150"></TextBox>
+            <TextBox x:Name="B" MaxLength="5" Height="20" Width="150" Margin="0 5"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Label Content="числа кратные 13 и 5:"></Label>
+            <Label Content="0"  x:Name="chisla" Width="52"></Label>
+            <Label Content="Сумма чисел кратная 13 и 5:" Width="170"></Label>
+            <Label Content="0" x:Name="sumers" Width="83"></Label>
+        </StackPanel>
+        
+    </Grid>
+</Page>

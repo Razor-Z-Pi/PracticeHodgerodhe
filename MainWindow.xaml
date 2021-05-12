@@ -1,0 +1,81 @@
+﻿<Window x:Class="PracticeHodgerodhe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticeHodgerodhe"
+        mc:Ignorable="d"
+        Title="Солянка по учебной практике" Height="550" Width="900" ResizeMode="CanMinimize" WindowState="Minimized" Icon="icon/if-food-c214-2427858_85695.png">
+
+    <Grid Background="{StaticResource backfont }">
+        <!--Основная разметка интерфейса-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <!--Шапка-->
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Menu Background="Transparent" FontFamily="sans-serif" FontWeight="Bold">
+                <MenuItem x:Name="Practica" Click="Practica_Click" Header="Задания к практике"></MenuItem>
+                <MenuItem x:Name="Avtor" Click="Avtor_Click" Header="About the developer"></MenuItem>
+            </Menu>
+        </StackPanel>
+
+        <!--Левая панель с бургером и кнопками-->
+        <Grid x:Name="GridLeft" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="0" Width="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Go" Click="Go_Click" Grid.Column="1" Background="Transparent" BorderThickness="0" Height="50" HorizontalAlignment="Right" VerticalAlignment="Top"  RenderTransformOrigin="1.409,0.676" Width="50">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="100"></Setter>
+                    </Style>
+                </Button.Resources>
+                <StackPanel Height="42">
+                    <Image Source="./images/menu_burger_icon_177188.png"></Image>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="Back" Click="Back_Click" Grid.Column="1" Background="Transparent" BorderThickness="0" Height="47" HorizontalAlignment="Right" VerticalAlignment="Top" RenderTransformOrigin="1.409,0.676" Width="0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="100"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="0.003"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="6.972"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <StackPanel Height="50">
+                    <Image Height="45" Source="./images/keyboard-left-arrow-button_icon-icons.com_72692.png" RenderTransformOrigin="0.5,0.5"></Image>
+                </StackPanel>
+            </Button>
+            <StackPanel>
+                <Button x:Name="btmBl1" Click="btmBl1_Click" Background="Transparent" Height="50" Content="Блок-1" BorderThickness="0"></Button>
+                <Button x:Name="btmBl2" Click="btmBl2_Click" Background="Transparent" Height="50" Content="Блок-2" BorderThickness="0"></Button>
+                <Button x:Name="btmBl3" Click="btmBl3_Click" Background="Transparent" Height="50" Content="Блок-3" BorderThickness="0"></Button>
+                <Button x:Name="btmBl4" Click="btmBl4_Click" Background="Transparent" Height="50" Content="Блок-4" BorderThickness="0"></Button>
+                <Button x:Name="btmBl5" Click="btmBl5_Click" Background="Transparent" Height="50" Content="Блок-5" BorderThickness="0"></Button>
+                <Button x:Name="btmBl6" Click="btmBl6_Click" Background="Transparent" Height="50" Content="Блок-6" BorderThickness="0"></Button>
+                <Button x:Name="btmBl7" Click="btmBl7_Click" Background="Transparent" Height="50" Content="Блок-7" BorderThickness="0"></Button>
+            </StackPanel>
+        </Grid>
+
+        <!--Остольная часть, фрейм для страниц отображения-->
+        <Frame Grid.Row="1" Grid.Column="1" x:Name="frm" NavigationUIVisibility="Hidden"></Frame>
+
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="PracticeHodgerodhe.Pages.Block_4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PracticeHodgerodhe.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="Block_4">
+
+    <Grid>
+        <!--Разметка сетки-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--Для 1 матрице-->        
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBox MaxLength="5" IsReadOnly="True" x:Name="Matr1" Height="113"></TextBox>
+        </StackPanel>
+
+        <!--Для 2 матрице-->
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBox IsReadOnly="True" x:Name="Matr2" Height="113"></TextBox>
+        </StackPanel>
+
+        <!--Для 3 матрице-->
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <TextBox IsReadOnly="True" x:Name="Matr3" Height="113"></TextBox>
+        </StackPanel>
+
+        <!--Для 4 матрице-->
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <TextBox IsReadOnly="True" x:Name="Matr4" Height="113"></TextBox>
+        </StackPanel>
+
+        <!--Кнопочка)))-->
+        <StackPanel VerticalAlignment="Center" Grid.RowSpan="4" Grid.Column="0">
+            <Button Height="40" Width="100" x:Name="Matrica" Click="Matrica_Click" Content="Показать"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
