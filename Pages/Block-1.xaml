@@ -34,7 +34,13 @@
             <Label x:Name="otvet" FontSize="18" Foreground="Black" Content=""/>
         </StackPanel>
         <StackPanel Grid.Row="2" Width="100" Height="50">
-            <Button x:Name="Hope" Height="50" Background="Bisque" BorderBrush="Red" Content="Решить" BorderThickness="4" Click="Hope_Click"></Button>
+            <Button x:Name="Hope" Height="50" Background="Bisque" BorderBrush="Red" BorderThickness="4" Content="Решить" Click="Hope_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="11"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

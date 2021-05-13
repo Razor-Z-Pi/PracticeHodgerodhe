@@ -21,7 +21,13 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                 <Label Content="Введите строку" Margin="10 0"></Label>
                 <TextBox x:Name="textWork" Height="30" Width="250"></TextBox>
-                <Button x:Name="btnAdd" Click="BtnAdd_Click" Width="100" Margin="10 0" Content="Ввод"></Button>
+                <Button x:Name="btnAdd" Click="BtnAdd_Click" Width="100" Margin="10 0" Content="Ввод" Background="Bisque" BorderBrush="Red" BorderThickness="4">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="11"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
         </StackPanel>
     </StackPanel>
 

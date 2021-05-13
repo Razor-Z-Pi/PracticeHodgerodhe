@@ -46,7 +46,13 @@
             <StackPanel Grid.Row="1">
                 <Label Content="3.2 Дан массив целых чисел (n=15)"></Label>
                 <Label Content=" заполненный случайным образом числами из промежутка [-20,50]."></Label>
-                <Button x:Name="GoVin" Click="GoVin_Click" Content="Решить" Height="30"  Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 10"></Button>
+                <Button x:Name="GoVin" Click="GoVin_Click" Content="Решить" Height="30"  Width="80" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 10" Background="Bisque" BorderBrush="Red" BorderThickness="4">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="11"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
             </StackPanel>
         </Grid>
 
@@ -73,7 +79,13 @@
             <TextBox MaxLength="3" Margin="0 0 0 4" x:Name="BoxNumber10"></TextBox>
             <TextBlock TextAlignment="Center" Text="Введите Цифры"></TextBlock>
             <TextBlock TextAlignment="Center" Text="для массива"></TextBlock>
-            <Button x:Name="addList" Click="addList_Click" Height="30" Width="60" Content="Добавить"></Button>
+            <Button x:Name="addList" Click="addList_Click" Height="30" Width="60" Content="Добавить" Background="Bisque" BorderBrush="Red" BorderThickness="2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="11"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
             <StackPanel Orientation="Horizontal">
                 <Label Content="А = "></Label>
                 <TextBox MaxLength="3" x:Name="Anumber" Width="30"></TextBox>

@@ -83,7 +83,13 @@
                     <ComboBoxItem Content="Вся область"></ComboBoxItem>
                     <ComboBoxItem Content="Тропичексий лес"></ComboBoxItem>
                 </ComboBox>
-                <Button x:Name="btnSerarch" Click="BtnSerarch_Click" Width="100" Height="20" Margin="235 0 0 0" Content="Поиск"></Button>
+                <Button x:Name="btnSerarch" Click="BtnSerarch_Click" Width="100" Height="20" Margin="235 0 0 0" Content="Поиск" Background="Bisque" BorderBrush="Red" BorderThickness="1">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="11"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
             </StackPanel>
         </StackPanel>
         

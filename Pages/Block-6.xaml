@@ -26,7 +26,13 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Файл из чисел от «7» до «10»"></Label>
                 <Label Content="" x:Name="ff"></Label>
-                <Button x:Name="creates" Click="Creates_Click" Content="Создать" Width="100" Height="30"></Button>
+                <Button x:Name="creates" Click="Creates_Click" Content="Создать" Width="100" Height="30" Background="Bisque" BorderBrush="Red" BorderThickness="4">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="11"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
                 <Label Content="Заменить значение 5-го элемента файла числом «33»"></Label>
                 <Label Content="" x:Name="ff2"></Label>
             </StackPanel>
@@ -37,7 +43,13 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Файл целых чисел  f1"></Label>
                 <Label Content="" x:Name="f1"></Label>
-                <Button Content="Заполнить" x:Name="addword" Click="Addword_Click" Width="100" Height="30"></Button>
+                <Button Content="Заполнить" x:Name="addword" Click="Addword_Click" Width="100" Height="30" Background="Bisque" BorderBrush="Red" BorderThickness="4">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="11"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
                 <Label Content="значения которых меньше  «20»"></Label>
                 <Label Content="" x:Name="f2"></Label>
             </StackPanel>
@@ -48,7 +60,13 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Файл целых чисел  f3 меньше 4"></Label>
                 <Label Content="" x:Name="f3"></Label>
-                <Button x:Name="addnum" Click="Addnum_Click" Content="Создать" Width="50" Height="30"></Button>
+                <Button x:Name="addnum" Click="Addnum_Click" Content="Создать" Width="50" Height="30" Background="Bisque" BorderBrush="Red" BorderThickness="2">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="11"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
                 <Label Content="Файл целых чисел  f4 меньше 7"></Label>
                 <Label Content="" x:Name="f4"></Label>
                 <Label Content="Сумма = "></Label>
@@ -61,7 +79,13 @@
             <StackPanel Orientation="Horizontal">
                 <TextBox Margin="10 0" x:Name="udv" Width="120"></TextBox>
                 <Label Content="" x:Name="f5"></Label>
-                <Button x:Name="udvoit" Click="Udvoit_Click" Content="Удвоить" Width="100" Height="30"></Button>
+                <Button x:Name="udvoit" Click="Udvoit_Click" Content="Удвоить" Width="100" Height="30" Background="Bisque" BorderBrush="Red" BorderThickness="4">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="11"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
                 <Label Content="Стало"></Label>
                 <Label Content="" x:Name="f6"></Label>
             </StackPanel>
@@ -71,7 +95,13 @@
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="4">
             <StackPanel Orientation="Horizontal">
                 <TextBox Margin="10 0" x:Name="texter" Width="100"></TextBox>
-                <Button Content="Сравнить" Click="Sravn_Click" x:Name="sravn" Width="100" Height="30"></Button>
+                <Button Content="Сравнить" Click="Sravn_Click" x:Name="sravn" Width="100" Height="30" Background="Bisque" BorderBrush="Red" BorderThickness="4">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="11"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
                 <Label Content="Введите для сравнения -> "></Label>
                 <TextBox x:Name="numberSr" Width="50"></TextBox>
                 <Label Content="Стало"></Label>
@@ -82,11 +112,11 @@
         <!--Кнопка для вывода всех txt. Записей-->
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="5">
             <StackPanel Orientation="Horizontal">
-                <Button Content="Файл 6.1"  Width="132" Height="30" x:Name="file" Click="File_Click"></Button>
-                <Button Content="Файл 6.2" Width="132" Height="30" x:Name="file1" Click="File1_Click"></Button>
-                <Button Content="Файл 6.3" Width="132" Height="30" x:Name="file2" Click="File2_Click"></Button>
-                <Button Content="Файл 6.4" Width="132" Height="30" x:Name="file3" Click="File3_Click"></Button>
-                <Button Content="Файл 6.5" Width="132" Height="30" x:Name="file4" Click="File4_Click"></Button>
+                <Button Content="Файл 6.1"  Width="132" Height="30" x:Name="file" Click="File_Click" Background="Bisque" BorderBrush="Red" BorderThickness="4"></Button>
+                <Button Content="Файл 6.2" Width="132" Height="30" x:Name="file1" Click="File1_Click" Background="Bisque" BorderBrush="Red" BorderThickness="4"></Button>
+                <Button Content="Файл 6.3" Width="132" Height="30" x:Name="file2" Click="File2_Click" Background="Bisque" BorderBrush="Red" BorderThickness="4"></Button>
+                <Button Content="Файл 6.4" Width="132" Height="30" x:Name="file3" Click="File3_Click" Background="Bisque" BorderBrush="Red" BorderThickness="4"></Button>
+                <Button Content="Файл 6.5" Width="120" Height="30" x:Name="file4" Click="File4_Click" Background="Bisque" BorderBrush="Red" BorderThickness="4"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>

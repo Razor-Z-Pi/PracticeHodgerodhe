@@ -43,7 +43,13 @@
 
         <!--Кнопочка)))-->
         <StackPanel VerticalAlignment="Center" Grid.RowSpan="4" Grid.Column="0">
-            <Button Height="40" Width="100" x:Name="Matrica" Click="Matrica_Click" Content="Показать"></Button>
+            <Button Height="40" Width="100" x:Name="Matrica" Click="Matrica_Click" Content="Показать" Background="Bisque" BorderBrush="Red" BorderThickness="4">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="11"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

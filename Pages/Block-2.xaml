@@ -55,7 +55,13 @@
         </StackPanel>
 
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="6" Grid.ColumnSpan="2">
-            <Button x:Name="btnResh" Click="btnResh_Click" Width="50" Height="30" Content="Решить"></Button>
+            <Button x:Name="btnResh" Click="btnResh_Click" Width="50" Height="30" Content="Решить" Background="Bisque" BorderBrush="Red" BorderThickness="2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="11"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.Row="7" Grid.ColumnSpan="2">
