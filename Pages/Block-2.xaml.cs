@@ -32,11 +32,10 @@ namespace PracticeHodgerodhe.Pages
 
         private void btnResh_Click(object sender, RoutedEventArgs e)
         {
-            int x, y, z;
-            int i = 0;
-            int s1 = 0; 
-            int s2 = 0;
-            int sumer = 0;
+            int x, y, z; // Переменные для разделения числа на части
+            int s1 = 0; // Переменная для суммы кратны чисел на 13
+            int s2 = 0; // Переменная для суммы кратны чисел на 5
+            
             try  // Проверка на пустоту
             {
                 if (natNum.Text == "")
@@ -116,15 +115,14 @@ namespace PracticeHodgerodhe.Pages
                 }
 
                 numbers.Content = povtorNum; // Вывод на экран для доп. информации!!!
-
                 int Be = naturalNum / srav; // Для сравнения, по условию задачи (верно ли, что в данном числе сумма цифр больше В, а само число делится на В (В вводится  с клавиатуры))
 
-                if (sumer > Be)
+                if (srav > Be)
                 {
-                    MessageBox.Show($"{sumer} > {Be}, Да число больше");
+                    MessageBox.Show($"{srav} > {Be}, Да число больше");
                 }
                 else
-                    MessageBox.Show($"{sumer} < {Be}, Число меньше");
+                    MessageBox.Show($"{srav} < {Be}, Число меньше");
 
                 while(b > a) // Выполнения последнего задания, для суммы кратных 13 и 5 
                 {
